@@ -27,7 +27,7 @@ async def video_stream(websocket, path):
     cap.release()  # Release the capture and loop back to the start of the video
 
 async def main():
-  async with websockets.serve(video_stream, "0.0.0.0", 9001):
+  async with websockets.serve(video_stream, "192.168.1.142", 8765): # Replace with your local IP address
     await asyncio.Future()  # Run forever
 
 if __name__ == "__main__":
