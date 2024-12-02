@@ -36,7 +36,7 @@ async def video_stream(websocket, path):
         cap.release()  # Release the camera when done
 
 async def main():
-    async with websockets.serve(video_stream, "192.168.56.1", 8765):  # Replace with your local IP address
+    async with websockets.serve(video_stream, "192.168.1.142", 8765):  # Replace with your local IP address
         await asyncio.Future()  # Run forever
 
 if __name__ == "__main__":
